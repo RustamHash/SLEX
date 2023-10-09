@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="/static/css/style.css"/>
+<head>
+    <meta charset="UTF-8">
+    {% if title %}
+        <title>{{ title }}</title>
+    {% else %}
+        <title>Главная</title>
+    {% endif %}
+</head>
+<body>
+{#Шапка сайта со ссылкой на главную, отображается на всех страницах#}
+<div class="container_header">
+    <div class="logo_container">
+        <a href="/">
+            <img src="/static/image/slex-logo.png" alt="logo_SLEX"/>
+        </a>
+        <div class="user_container"><h3>{{ current_user }}</h3></div>
+    </div>
+
+
+</div>
+{#-----------------------------------------------------------------#}
+
+{#Блок для основного меню#}
+{% block head_page %}
+    <div class="box_head_menu">
+        <ul class="mainmenu">
+            <li><a href="/">Главная</a></li>
+            <li><a href="/Скуд">Скуд</a></li>
+            <li><a href="/Заявки">Заявки</a></li>
+            <li><a href="/Настройки">Настройки</a></li>
+            <li class="admin_link"><a href="{{ url_for('admin') }}">Админка</a></li>
+            <li class="exit_link"><a href="{{ url_for('logout') }}/">Выход</a></li>
+        </ul>
+    </div>
+{% endblock head_page %}
+{#-----------------------#}
+
+{#Блок для вывода мгновенны сообщений#}
+{% for cat, msg in get_flashed_messages(True) %}
+    <div class="flash {{ cat }}">{{ msg }}</div>
+{% endfor %}
+{#-----------------------------------#}
+
+{#Блок для админки#}
+{% block admin %}
+{% endblock %}
+{#----------------------#}
+
+{#Блок для контента главной страницы#}
+{% block relax %}
+{% endblock %}
+{#----------------------#}
+
+{#Блок для реализации контента#}
+{% block body %}
+{% endblock body %}
+{#----------------------------#}
+</body>
+</html>

@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block admin %}
+    <div class="box_head_menu_admin">
+        <ul class="admin_menu">
+            <li><a href="{{ url_for('create_user') }}">Добавить пользователя</a></li>
+            <li><a href="{{ url_for('edit_user') }}">Корректировать пользователя</a></li>
+        </ul>
+    </div>
+{% endblock %}

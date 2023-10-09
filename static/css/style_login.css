@@ -1,0 +1,68 @@
+.dws_input {
+    padding-top: 50px;
+}
+select {
+    min-width: 210px;
+    margin-bottom: 25px;
+    border-radius: 4px;
+    padding-left: 10px;
+}
+input[type="password"] {
+    min-width: 200px;
+    margin-bottom: 25px;
+    border-radius: 4px;
+    padding-left: 10px;
+}
+.container {
+    width: 450px;
+    height: 300px;
+    background-color: #182134;
+    margin: 250px auto 0 auto;
+    text-align: center;
+    justify-content: center;
+    box-shadow: 0 -5px 0 #3adbfd;
+}
+
+.box_username {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 10px;
+    padding: 10px;
+}
+
+label {
+    color: #3adbfd;
+}
+
+input[type="submit"] {
+ padding: 13px 30px;
+ margin: 5px 0 20px 0;
+ font-size: 15px;
+ color: #fff;
+ background-color: #2ca8c6;
+ border: none;
+ border-bottom: 4px solid #6ee9fd;
+ cursor: pointer;
+}
+
+.login_remember {
+    color: #fff;
+}
+
+input[type="submit"]:hover {
+    transition: all 0.5s;
+    background: #fff;
+    color: #2c536c;
+}
+
+
+/*Всплывающие сообщения*/
+.flash {padding: 10px;}
+.flash.success {
+	border: 1px solid #21DB56;
+	background: #AEFFC5;
+}
+.flash.error {
+	border: 1px solid #FF4343;
+	background: #FF9C9C;
+}

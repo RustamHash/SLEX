@@ -1,0 +1,85 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/*Стиль главного меню*/
+ul.mainmenu {
+    list-style: none;
+    background: #3F4137;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    color: #fdc073;
+    font-size: 20px;
+    overflow: hidden;
+}
+
+ul.mainmenu li {
+    float: left;
+    margin: 10px 40px 0 0;
+}
+
+ul.mainmenu li a {
+    color: #fdc073;
+    text-decoration: none;
+}
+
+ul.mainmenu li a:hover {
+    color: #d07b11;
+}
+
+.exit_link {
+    position: absolute;
+    right: 0;
+}
+
+.admin_link {
+    position: absolute;
+    right: 100px;
+}
+
+/*Стиль мгновенных сообщений*/
+.flash {
+    padding: 10px;
+    text-align: center;
+}
+
+.flash.success {
+    border: 1px solid #21DB56;
+    background: #AEFFC5;
+}
+
+.flash.error {
+    border: 1px solid #FF4343;
+    background: #FF9C9C;
+}
+
+/*Стиль шапки основного макета, отображается на всех страницах*/
+.container_header {
+    display: grid;
+    background: linear-gradient(to right, pink, blue, hotpink);
+}
+
+.container_header:hover {
+    background: linear-gradient(to left, pink, #7a5267, hotpink);
+}
+.container_header a {
+    display: block;
+    overflow: hidden;
+}
+
+.user_container {
+    position: relative;
+    text-align: right;
+}
+
+.user_container h3 {
+    position: absolute;
+    top: -80px;
+    right: 15px;
+}
+
+img {
+    max-width: 150px;
+}

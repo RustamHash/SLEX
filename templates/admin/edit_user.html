@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="/static/css/style_table.css">
+{% extends "admin/admin.html" %}
+
+
+
+{% block relax %}
+<div>
+    {% if user_list %}
+    <form name="edit_user" method="post" action="{{ url_for('edit_user') }}" >
+{#        {{ form.csrf_token }}#}
+{#        {{ form.hidden_tag() }}#}
+        <label for="username"></label>
+        <label for="password"></label>
+        <label for="admin"></label>
+        <div class="edit_user_box">
+            {% for user in user_list %}
+                <div>
+                    {{ form.username(value=user.username) }}
+                    {{ form.password(value=user.password) }}
+                    {{ form.role(value=user.role) }}
+
+                </div>
+            {% endfor %}
+            {{ form.submit }}
+        </div>
+    </form>
+    {% endif %}
+    {% if params %}
+        {{ params| safe }}
+    {% endif %}
+</div>
+{% endblock %}
